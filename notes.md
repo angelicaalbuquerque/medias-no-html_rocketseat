@@ -165,3 +165,59 @@ Tranformando essa `div` em uma tag `<figure>`, resolve o problema, substituindo 
 ```
 
 Assim, o HTML já entende que há uma relação entre a _caption_ e a imagem.
+
+### SVG
+
+É uma marcação, estilo HTML, mas não é para textos e sim para fazermos imagens.
+
+Para entender melhor imagem rasterizada e imagem vetorizada:
+
+- rasterizada: imagem pixelada, construída via pixels.Em cada grid eu tenho um pixel e, assim, a imagem é montada, pixel a pixel. Quanto maior a densidade, mais detalhada é a imagem. <br><br>
+- vetorizada: imagem feita via algoritmo, com processamento bem diferente, tendo benefícios e desvantagens.
+
+Benefícios:
+
+- Mais leve;
+- Mais detalhada (se der zoom, não vê pixels, mas sim mais detalhes);
+- Não perde a qualidade;
+- Maior acessibilidade e SEO (já que é todo escrito);
+- Pode ser editada via CSS ou atributos.
+
+Desvantagens:
+
+- Pode ser mais complicado de trabalhar;
+- Quanto mais complexa a imagem, mais trabalho para o navegador;
+- Navegadores mais antigos não possuem suporte a essa tag.
+
+Para fotografias, ainda é melhor utilizar imagens rasterizadas (.png, .jpg, .jpeg).
+
+Apesar de ter programas específicos onde você pode criar arquivos svg, como Illustrator e Figma, você pode escrevê-lo à mão também.
+
+Por exemplo, o svg escrito de um círculo:
+
+```html
+<svg
+  version="1.1"
+  baseProfile="full"
+  xmlns="http://www.w3.org/2000/svg"
+  width="100"
+  height="100">
+  <circle
+    cx="50"
+    cy="50"
+    r="40"
+    stroke="pink"
+    stroke-width="4"
+    fill="cyan">
+</svg>
+```
+
+Algumas desvantagens de deixar o SVG diretamente na página/à mão, são:
+
+- Não ter a possibilidade de cache que os browsers fazem;
+- Se tiver que repetir o código, ele ficará muito maior e pesado;
+
+Já algumas vantagens são:
+
+- Redução de chamadas HTTP de fora;
+- Possibilidade de estilização direto no canva (espaço de trabalho da imagem).
