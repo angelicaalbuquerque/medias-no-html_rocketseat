@@ -1,4 +1,4 @@
-## Videos:
+## Videos
 
 Para utilizar vídeos no HTML, utilizamos a tag `<video></video>`, sendo importante o atributo `src` contendo o caminho para o vídeo a ser incorporado.
 
@@ -39,7 +39,7 @@ loop: ao chegar no final do vídeo, tocará o vídeo novamente -- mas isso depen
 muted: o vídeo começa mutado. <br>
 poster: uma imagem que serve como "capa" do vídeo antes dele começar.
 
-## Audio:
+## Audio
 
 Muito semelhante à tag video.
 
@@ -52,7 +52,7 @@ Muito semelhante à tag video.
 
 Através do JavaScript, entretanto, conseguimos fazer controles muito avançados com áudios. Além de que também conseguimos conseguir de outro local o áudio, como SoundCloud.
 
-## Iframes:
+## Iframes
 
 Inline Frame Element é um elemento que vai trazer conteúdo externo.
 
@@ -83,3 +83,85 @@ Uma boa prática é incluir também a tag Title para ajudar na Acessibilidade. `
 Podemos fazer isso (incorporação via iframe) com vídeo, áudio, mapa...
 
 Para mais detalhes sobre Iframes e seus atributos, clique <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe">aqui</a>.
+
+## Imagens
+
+Usando a tag `img`, o Emment pelo menos coloca o básico que vamos precisar de imagens, o `src` (que vai apontar onde está a imagem) e o `alt` (se a imagem não é achada por algum motivo, alt vai mostrar um texto alternativo). Por exemplo:
+
+```html
+<img
+  src="https://source.unsplash.com/random"
+  alt="Imagem aleatória do Unsplash"
+/>
+```
+
+Inserindo mais atributos:
+
+```html
+<img
+  src="https://source.unsplash.com/random"
+  alt="Imagem aleatória do Unsplash"
+/>
+<a href="https://unsplash.com/">
+  <img
+    src="https://source.unsplash.com/random"
+    alt="Imagem aleatória do Unsplash"
+    title="Colocar um título na imagem"
+    width="500px"
+    height="auto"
+  />
+</a>
+```
+
+### Imagens via CSS
+
+outro jeito de adicionar imagens é via CSS. Por exemplo:
+
+```html
+<p
+  style="background-image: url(../assets/image/christopher-gower-m_HRfLhgABo-unsplash.jpg);"
+>
+  Imagem
+</p>
+```
+
+Mas background-image é utilizado somente para estilo, não é semântico e falta significado. Para isso, o recomendado é utilizar `<figure>`e `<figcaption>`.
+
+### Figure
+
+Uma forma de criar títulos visíveis para as imagens seria inserindo uma tag `<p>` depois da imagem. Entretando, continuaria com o problema de falta de semântica:
+
+```html
+<div class="figure">
+  <a href="https://unsplash.com/">
+    <img
+      src="https://source.unsplash.com/random"
+      alt="Imagem aleatória do Unsplash"
+      title="Colocar um título na imagem"
+      width="250px"
+      height="auto"
+    />
+  </a>
+  <p>Imagem extraída do Unsplash</p>
+</div>
+```
+
+Tranformando essa `div` em uma tag `<figure>`, resolve o problema, substituindo ainda a tag `<p>` por `<figcaption>`:
+
+```html
+<a href="https://unsplash.com/">
+  <figure>
+    <img
+      src="https://source.unsplash.com/random"
+      alt="Imagem aleatória do Unsplash"
+      title="Colocar um título na imagem"
+      width="250px"
+      height="auto"
+    />
+
+    <figcaption>Imagem extraída do Unsplash</figcaption>
+  </figure>
+</a>
+```
+
+Assim, o HTML já entende que há uma relação entre a _caption_ e a imagem.
