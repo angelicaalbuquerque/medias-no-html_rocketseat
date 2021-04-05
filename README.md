@@ -32,16 +32,16 @@ Lecionado por Mayk Brito, o curso foca em explorar as possibilidades de utilizar
 ### Grade do curso
 
 <details>
-  <summary>Módulo 01 | Áudio e Vídeo </summary>
+  <summary>Módulo 01 | Áudio e Vídeo ✔️</summary>
 
-- Video ✔️
+- Video
 - Áudio
 - Iframe
 
 </details>
 
 <details>
-  <summary>Módulo 02 | Images </summary>
+  <summary>Módulo 02 | Images ✔️</summary>
 
 - Images
 - Praticando images
@@ -53,7 +53,7 @@ Lecionado por Mayk Brito, o curso foca em explorar as possibilidades de utilizar
 
 ## 📝 Notas de aula
 
-Anotações das aulas estão disponíveis em breve.
+Anotações das aulas estão disponíveis <a href="https://github.com/angelicaalbuquerque/medias-no-html_rocketseat/blob/main/notes.md" target="_blank">aqui</a>.
 
 ## 📬 Entre em contato!
 
