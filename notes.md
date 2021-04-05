@@ -53,3 +53,33 @@ Muito semelhante à tag video.
 Através do JavaScript, entretanto, conseguimos fazer controles muito avançados com áudios. Além de que também conseguimos conseguir de outro local o áudio, como SoundCloud.
 
 ## Iframes:
+
+Inline Frame Element é um elemento que vai trazer conteúdo externo.
+
+```html
+<iframe src="" frameborder="0"></iframe>
+```
+
+`frameborder` é para falar se vai ter borda ou não no frame e src é a fonte do conteúdo.
+
+Num vídeo incorporado do Youtube, os atributos são geralmente altura, largura, fonte, borda e allow.
+
+```html
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/Yw6u6YkTgQ4"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+```
+
+O allow são atributos específicos de configurações da página de onde estamos buscando o conteúdo.
+
+Uma boa prática é incluir também a tag Title para ajudar na Acessibilidade. `title="Vídeo de computador cantando Hello World"`.
+
+Podemos fazer isso (incorporação via iframe) com vídeo, áudio, mapa...
+
+Para mais detalhes sobre Iframes e seus atributos, clique <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe">aqui</a>.
